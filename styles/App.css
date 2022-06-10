@@ -1,7 +1,13 @@
 .App {
   height: 100vh;
-  background: -webkit-gradient(linear, left top, right top, from(#effaff), to(#d9e7ff));
-  background: linear-gradient(90deg, #effaff 0%, #d9e7ff 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#607d8b),
+    to(#d9e7ff)
+  );
+  background: linear-gradient(90deg, #607d8b 0%, #d9e7ff 100%);
   text-align: center;
   overflow: hidden;
 }
@@ -14,6 +20,17 @@
   padding: 0 30px 0 30px;
   color: white;
   position: relative;
+}
+
+.network-status {
+  position: fixed;
+  left: 0;
+  top: 0;
+  border: 0;
+  user-select: none;
+  background: red;
+  color: white;
+  font-weight: bold;
 }
 
 .authed-container {
@@ -40,12 +57,11 @@
   -webkit-text-fill-color: transparent;
 }
 
-.button-container{
+.button-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  
 }
 .cta-button {
   height: 45px;
@@ -80,7 +96,7 @@ button:disabled {
   color: #333;
 }
 
-.item-image{
+.item-image {
   height: 100px;
 }
 
@@ -107,7 +123,7 @@ button:disabled {
   color: white;
 }
 
-.connected-container input[type='text'] {
+.connected-container input[type="text"] {
   display: inline-block;
   padding: 10px;
   width: 50%;
@@ -129,12 +145,20 @@ button:disabled {
   flex-direction: column;
 }
 
+.wallet-connected-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .wallet-connected {
   font-size: 48px;
-    font-weight: 800;
-    background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0.5rem;
 }
 
 .buy-button:hover {
@@ -151,6 +175,7 @@ button:disabled {
   cursor: pointer;
   margin: 0.2rem;
   white-space: nowrap;
+  transition: all 0.3s ease;
 }
 
 .download-button {
@@ -163,7 +188,40 @@ button:disabled {
   cursor: pointer;
 }
 
-.create-product-button{
+.create-product-button {
+  background-image: linear-gradient(
+    to right,
+    #ff6e7f 0%,
+    #bfe9ff 51%,
+    #ff6e7f 100%
+  );
+  margin: 10px;
+  padding: 13px 24px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.create-product-button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* .create-product-button {
   margin: 10px;
   border: 0;
   font-size: 20px;
@@ -172,14 +230,15 @@ button:disabled {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  color:white;
-  background-color: transparent;
+  color: white;
+  background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
   transition: all 0.3s ease;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   z-index: 1;
-}
+} */
 
-.products-container{
+.products-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

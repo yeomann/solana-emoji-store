@@ -14,12 +14,12 @@ import {
 } from "@solana/spl-token";
 import BigNumber from "bignumber.js";
 import products from "./products.json";
+import { NETWORK_ADDRESS, SOL_SELLER_ADDRESS } from "../../lib/constants";
+import { areWeOnDevnet } from "../../lib/util";
 
 // wallet address!
-const usdcAddress = new PublicKey(
-  "Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr"
-); // token address of the USDC token on the devnet
-const sellerAddress = "2DqyLrVkECBReGsJrosXcRH3BZBx4m116BigPumE8Hb9"; // phantom
+const usdcAddress = new PublicKey(areWeOnDevnet() ? NETWORK_ADDRESS.devnet.USDC : NETWORK_ADDRESS.mainnet.USDC);
+const sellerAddress = SOL_SELLER_ADDRESS; 
 const sellerPublicKey = new PublicKey(sellerAddress);
 
 const createSolTransaction = async (req, res) => {
