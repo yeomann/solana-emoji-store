@@ -1,6 +1,6 @@
 .App {
   height: 100vh;
-  background-color: rgb(20, 20, 20);
+  background-color: #4e44ce;
   text-align: center;
   overflow: hidden;
 }
@@ -131,6 +131,7 @@ button:disabled {
   border-radius: 3px;
   padding: 8px 16px;
   cursor: pointer;
+  margin: 0.2rem;
 }
 
 .download-button {
