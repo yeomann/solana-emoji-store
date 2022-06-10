@@ -11,5 +11,7 @@ To get started with this project, clone this repo and follow these commands:
 ### What is the `.vscode` Folder?
 includes a list of suggested extensions that will help you build this project!
 
+### Deployed?
+Yes, deployed at https://solana-emoji-store.vercel.app/
 
 For more learning check buildspace :) 
