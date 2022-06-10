@@ -143,6 +143,24 @@ export default function Buy({ itemID }) {
     return <InfinitySpin color="gray" />;
   }
 
+  const BuyButton = () => (
+    <div className="buy-button-container">
+      <button
+        disabled={loading}
+        className="buy-button"
+        onClick={() => processTransaction("sol")}
+      >
+        Buy with SOL
+      </button>
+      <button
+        disabled={loading}
+        className="buy-button"
+        onClick={() => processTransaction("usdc")}
+      >
+        Buy with USDC
+      </button>
+    </div>
+  );
 
   return (
     <div>
@@ -150,9 +168,7 @@ export default function Buy({ itemID }) {
       {item ? (
         <IPFSDownload hash={item.hash} filename={item.filename} />
       ) : (
-        <button disabled={loading} className="buy-button" onClick={processTransaction}>
-          Buy now 🠚
-        </button>
+        <BuyButton />
       )}
     </div>
   );
@@ -166,22 +182,7 @@ export default function Buy({ itemID }) {
           cta="Download emojis"
         />
       ) : (
-        <div style={{ display: "flex" }}>
-          <button
-            disabled={loading}
-            className="buy-button"
-            onClick={() => processTransaction("sol")}
-          >
-            Buy now - SOL
-          </button>
-          <button
-            disabled={loading}
-            className="buy-button"
-            onClick={() => processTransaction("usdc")}
-          >
-            Buy now - USDC
-          </button>
-        </div>
+        <BuyButton />
       )}
     </div>
   );

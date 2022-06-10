@@ -1,6 +1,7 @@
 .App {
   height: 100vh;
-  background-color: #4e44ce;
+  background: -webkit-gradient(linear, left top, right top, from(#effaff), to(#d9e7ff));
+  background: linear-gradient(90deg, #effaff 0%, #d9e7ff 100%);
   text-align: center;
   overflow: hidden;
 }
@@ -123,6 +124,23 @@ button:disabled {
   height: 50px;
 }
 
+.buy-button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.wallet-connected {
+  font-size: 48px;
+    font-weight: 800;
+    background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.buy-button:hover {
+  background-color: #4caf50;
+}
+
 .buy-button {
   border: none;
   background-color: #4664ff;
@@ -132,6 +150,7 @@ button:disabled {
   padding: 8px 16px;
   cursor: pointer;
   margin: 0.2rem;
+  white-space: nowrap;
 }
 
 .download-button {

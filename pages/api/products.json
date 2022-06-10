@@ -7,5 +7,19 @@
     "image_url": "https://i.imgur.com/rVD8bjt.png",
     "filename": "Emojis.zip",
     "hash": "QmWWH69mTL66r3H8P4wUn24t1L5pvdTJGUTKBqT11KCHS5"
+  },
+  {
+    "id": 2,
+    "name": "Test",
+    "price": "0.01",
+    "image_url": "https://i.imgur.com/YJYNTno.jpeg",
+    "description": "some test description ok!"
+  },
+  {
+    "id": 3,
+    "name": "My new favorite emoji.",
+    "price": "0.006",
+    "image_url": "https://i.imgur.com/WBTJ1Ta.jpeg",
+    "description": "Description of fav emoji"
   }
 ]
